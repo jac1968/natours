@@ -1,19 +1,19 @@
-{
+
   "name": "natours",
   "version": "1.0.0",
   "description": "Practica",
   "main": "index.js",
-  "scripts": {
+  "scripts": 
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
+  ,
+  "repository": 
     "type": "git",
     "url": "git+https://github.com/jac1968/natours.git"
-  },
+  ,
   "author": "Jesus Carrasquilla",
   "license": "ISC",
-  "bugs": {
+  "bugs": 
     "url": "https://github.com/jac1968/natours/issues"
-  },
+  ,
   "homepage": "https://github.com/jac1968/natours#readme"
-}
+
