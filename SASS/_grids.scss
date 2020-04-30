@@ -1,0 +1,107 @@
+.fila { 
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+}
+
+.centrar-texto { 
+    text-align: center;
+}
+
+.encabezado-tercero {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.parrafo {
+    font-size: 1.3rem;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }   
+
+}
+
+.redes {
+    height: 95vh;
+    padding: 5rem ;   
+    background-image: linear-gradient(to right bottom,
+    rgba($verde-claro, 0.8), rgba($verde-oscuro, 0.8)),
+    url(/Imagenes/Lighthouse.jpg);
+    background-size: cover;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    color: $negro;
+    clip-path: polygon( 0 25%, 100% 0, 100% 75%, 0 100% );
+    margin-top: -20rem;
+    align-content: center;
+}
+
+.red { 
+    background-color: $blanco;
+    font-size: 1.4rem;
+    line-height: 1.3rem;
+    padding: 1.2rem ;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba($negro, .4);
+    transition: all .3s;
+}
+
+.tours {
+    margin-top: -20rem;
+    padding: 18rem 0 35rem 0;
+    display: grid;
+    background-color: $gris-claro;
+    grid-template-columns: repeat(3, 1fr);
+    &-texto {
+        grid-column: span 3;
+    }
+    display: flexbox;
+    justify-items: center;
+}
+
+.composicion2 {
+    position: relative;
+    perspective: 150rem;
+    display: flex;
+    width: 15rem;
+    height: 15rem;
+    justify-content:  center;
+    }
+
+.carta {
+    width: 15rem;
+    height: 20rem;
+    top: 0;
+    left: 0;
+    border-radius: 3px ;
+    box-shadow: 0 1.5rem 6rem rgba($negro, .3);
+    backface-visibility: hidden;
+    transition: all .9s ease-in-out;
+    }    
+
+.carta-frente {
+    background-color: $blanco;
+}   
+
+.carta-reverso {
+    position: absolute;
+    transform: rotateY(180deg);
+}
+ 
+.color-rev1 {
+    background-image: linear-gradient(to right bottom, $naranja-claro, $naranja-oscuro);
+}
+.color-rev2 {
+    background-image: linear-gradient(to right bottom, $verde-claro, $verde-oscuro);
+}    
+.color-rev3 {
+    background-image: linear-gradient(to right bottom, $azul-claro, $azul-oscuro);    
+}
+.karta:hover .carta-frente {
+    transform: rotateY(180deg);
+}
+.karta:hover .carta-reverso {
+    transform: rotateY(0deg);    
+}  

@@ -4,8 +4,8 @@
     margin-top:-25vh;
 }    
 
-.encabezado--secundario { 
-    font-size: 3.5rem;
+.encabezado-animado { 
+    font-size: 2.2rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0rem;
@@ -14,13 +14,11 @@
     -webkit-background-clip: text;
     color: transparent;
     transition: all .2s;
+    &:hover { 
+        transform: skewY(3deg) skewX(15deg) scale(1.1); 
+        text-shadow: .5rem 1rem 2rem rgba($negro, .5);
+    }
 }
-
-.encabezado--secundario:hover { 
-    transform: skewY(3deg) skewX(15deg) scale(1.1); 
-    text-shadow: .5rem 1rem 2rem rgba($negro, .5);
-}
-
 .red {
     &:hover {
         transform: translateY(-1.5rem) scale(1.1);
