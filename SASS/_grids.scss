@@ -49,7 +49,7 @@
 
 .tours {
     margin-top: -20rem;
-    padding: 18rem 7rem 22rem 7rem;
+    padding: 18rem 7rem 2rem 7rem;
     display: grid;
     grid-column-gap: 7rem;
     background-color: $gris-claro;
@@ -191,4 +191,34 @@
 .valor {
  font-size: 3.2rem;
  font-weight: 100;   
+}
+
+.historias {
+    position: relative;
+    padding: 10rem 0;
+    &-centrar {
+        text-align: center;
+    }
+}
+
+.seccion-libro {
+    padding: 15rem 6rem;
+    background-image: linear-gradient(to right bottom, $verde-claro, $verde-oscuro);
+}
+
+.libro {
+    background-image: rgba($blanco, .9), url(/Imagenes/paisaje4.jpg);
+    background-image: linear-gradient(105deg,
+                                     rgba($blanco, .7)  0%,
+                                     rgba($blanco, .7) 50%,
+                                     transparent 50%),
+                                     url(/Imagenes/paisaje4.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: 0 2 3rem rgba($negro, 0.8);
+    height: 37rem;
+    &-formulario {
+        width: 50%;
+        padding: 3rem;
+    }
 }

@@ -1,0 +1,51 @@
+.historia {
+    width: 75%;
+    margin: 15px auto;
+    box-shadow: 0 3rem 6rem rgba($negro, .2);
+    background-color: rgba($blanco, .5);
+    border-radius: 3px;
+    padding: 2.5rem;
+    font-size: 1rem;
+    transform: skewX(-12deg);
+    &-figura {
+        width: 10rem;
+        height: 10rem;
+        background-color: aqua;
+        float: left;
+        shape-outside: circle(40% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewx(12deg);
+        position: relative;
+    }
+    &-imagen {
+        height: 100%;
+        transform:  scale(1.3);
+        backface-visibility: hidden;
+        transition: all .4s;
+    }
+    &-texto {
+        transform: skewX(12deg);
+    }
+    &-leyenda {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $blanco;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+    }
+    &:hover &-leyenda {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &-imagen {
+        transform:  scale(1);
+        filter: blur(3px) brightness(80%) ;
+    }
+
+}

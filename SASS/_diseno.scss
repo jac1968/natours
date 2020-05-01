@@ -25,7 +25,8 @@ header {
        left: 4rem;
     }   
         .logo { 
-            height: 3.5rem;
+            height: 4.5rem;
+            clip-path: circle(50% at 50% 50%);
         }
 
     .caja-texto { 

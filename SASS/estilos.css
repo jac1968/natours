@@ -37,7 +37,9 @@ header .logo-box {
 }
 
 header .logo {
-  height: 3.5rem;
+  height: 4.5rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
 }
 
 header .caja-texto {
@@ -137,7 +139,7 @@ header .encabezado-secundario {
 
 .tours {
   margin-top: -20rem;
-  padding: 18rem 7rem 22rem 7rem;
+  padding: 18rem 7rem 2rem 7rem;
   display: -ms-grid;
   display: grid;
   grid-column-gap: 7rem;
@@ -320,6 +322,36 @@ header .encabezado-secundario {
   font-weight: 100;
 }
 
+.historias {
+  position: relative;
+  padding: 10rem 0;
+}
+
+.historias-centrar {
+  text-align: center;
+}
+
+.seccion-libro {
+  padding: 15rem 6rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#99ec8b), to(#12a172));
+  background-image: linear-gradient(to right bottom, #99ec8b, #12a172);
+}
+
+.libro {
+  background-image: rgba(255, 255, 255, 0.9), url(/Imagenes/paisaje4.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(/Imagenes/paisaje4.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2 3rem rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2 3rem rgba(0, 0, 0, 0.8);
+  height: 37rem;
+}
+
+.libro-formulario {
+  width: 50%;
+  padding: 3rem;
+}
+
 .seccion-sobre {
   background-color: #f8efef;
   padding: 25rem 0;
@@ -416,7 +448,7 @@ header .encabezado-secundario {
 
 .link:link, .link:visited {
   font-size: 1.6rem;
-  color: #99ec8b;
+  color: #12a172;
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #99ec8b;
@@ -497,6 +529,135 @@ header .encabezado-secundario {
           animation: moveInBottom .5s ease-out .75s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+.btn3 {
+  text-decoration: none;
+  padding: 1rem 1rem;
+  display: inline-block;
+  border-radius: 2rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 20%;
+  font-size: 1.2rem;
+}
+
+.back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .2;
+}
+
+.back-video-conte {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.formulario-grupo:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.formulario-entrada {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: .8rem 1.2rem;
+  border-bottom: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 70%;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.formulario-entrada:focus {
+  outline: none;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  border-bottom: 3px solid #99ec8b;
+}
+
+.formulario-entrada:focus:invalid {
+  border-bottom: 3px solid red;
+}
+
+.formulario-entrada::-webkit-input-placeholder {
+  color: #777;
+}
+
+.formulario-radio-grupo {
+  width: 40%;
+  display: inline-block;
+  margin-left: 0;
+}
+
+.formulario-radio-entrada {
+  display: none;
+}
+
+.formulario-radio-etiqueta {
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.formulario-radio-btn {
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid #12a172;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0rem;
+}
+
+.formulario-radio-btn::after {
+  content: "";
+  display: block;
+  height: .8rem;
+  width: .8rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(10%, 10%);
+          transform: translate(10%, 10%);
+  background-color: #12a172;
+  opacity: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.formulario-radio-entrada:checked ~ .formulario-radio-etiqueta .formulario-radio-btn::after {
+  opacity: 1;
+}
+
+.formulario-etiqueta {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .1rem;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.formulario-entrada:placeholder-shown + .formulario-etiqueta {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
 }
 
 .composicion {
@@ -615,5 +776,132 @@ header .encabezado-secundario {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
+}
+
+.historia {
+  width: 75%;
+  margin: 15px auto;
+  -webkit-box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  padding: 2.5rem;
+  font-size: 1rem;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+}
+
+.historia-figura {
+  width: 10rem;
+  height: 10rem;
+  background-color: aqua;
+  float: left;
+  shape-outside: circle(40% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem) skewx(12deg);
+          transform: translateX(-3rem) skewx(12deg);
+  position: relative;
+}
+
+.historia-imagen {
+  height: 100%;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.historia-texto {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.historia-leyenda {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.historia:hover .historia-leyenda {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.historia:hover .historia-imagen {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-filter: blur(3px) brightness(80%);
+          filter: blur(3px) brightness(80%);
+}
+
+.pie {
+  background-color: #333;
+  padding: 5rem;
+  font-size: 1rem;
+}
+
+.pie-logo-caja {
+  text-align: center;
+}
+
+.pie-logo {
+  width: 6rem;
+  height: auto;
+  -webkit-clip-path: ellipse(48% 53% at 50% 53%);
+          clip-path: ellipse(48% 53% at 50% 53%);
+}
+
+.pie-navegacion nav {
+  width: 100%;
+  border-top: 1px solid #f8efef;
+  padding: 2rem 0 0 0;
+  word-spacing: 3rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.pie-navegacion nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+.pie-navegacion nav a:hover, .pie-navegacion nav a:active {
+  color: #99ec8b;
+  font-weight: 900;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.pie-copyright {
+  padding: 2rem 0 0 0;
+  width: 100%;
+  color: #fff;
+  margin: 10px;
+  border-top: 1px solid #f8efef;
+  padding: 2rem 0 0 0;
+}
+
+.pie.fila .col-2 {
+  padding: 2rem 0 0 0;
+  display: inline;
+  justify-items: right;
 }
 /*# sourceMappingURL=estilos.css.map */
