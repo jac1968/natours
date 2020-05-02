@@ -9,6 +9,23 @@
     <title>Proyecto Natourt CSS Y SASS</title>
 </head>
 <body>
+    <div class="menu">
+        <input type="checkbox" class="menu-chekbox" name="" id="menu-clip">
+        <label for="menu-clip" class="menu-btn">
+            <span class="menu-icono">&nbsp;</span>    
+        </label>
+        <div class="menu-fondo">&nbsp;</div>
+        <nav class="menu-navegacion">
+            <ul class="menu-lista">
+                <li class="menu-item"><a href="#" class="menu-link"><span>01.- &nbsp;</span>About Natours</a></li>
+                <li class="menu-item"><a href="#" class="menu-link"><span>02.- &nbsp;</span>Your Benfits</a></li>
+                <li class="menu-item"><a href="#" class="menu-link"><span>03.- &nbsp;</span>Popular tours</a></li>
+                <li class="menu-item"><a href="#" class="menu-link"><span>04.- &nbsp;</span>Stories</a></li>
+                <li class="menu-item"><a href="#" class="menu-link"><span>05.- &nbsp;</span>Book now</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="logo-box">
             <img src="./Imagenes/favicon.png" alt="" class="logo">
@@ -18,7 +35,7 @@
                 <SPan class="encabezado-principal">OUTDOORS</SPan>  
                 <SPan class="encabezado-secundario">IS WHERE LIFE HAPPENS</SPan>  
             </h1>          
-            <a href="#" class="btn btn-blanco btn-animacion">DISCOVERY OUR TOURS</a>
+            <a href="#seccion-tours" class="btn btn-blanco btn-animacion">DISCOVERY OUR TOURS</a>
         </div>
     </header>
 
@@ -71,8 +88,7 @@
         
         </section>
         
-        <section class="tours">
-
+        <section class="tours" id="seccion-tours">
             <div class="centrar-texto tours-texto"> 
                 <h2 class="encabezado-animado">
                     MOST POPULAR TOURS 
@@ -103,7 +119,7 @@
                                 <p class="solo">Only</p>
                                 <p class="valor">$ 297</p>
                             </div>
-                            <a href="" class="btn btn-blanco">Buy now</a>
+                            <a href="#ventana" class="btn btn-blanco">Buy now</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +149,7 @@
                                 <p class="solo">Only</p>
                                 <p class="valor">$ 497</p>
                             </div>
-                            <a href="" class="btn btn-blanco">Buy now</a>
+                            <a href="#ventana" class="btn btn-blanco">Buy now</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +179,7 @@
                                 <p class="solo">Only</p>
                                 <p class="valor">$ 897</p>
                             </div>
-                            <a href="" class="btn btn-blanco">Buy now</a>
+                            <a href="#ventana" class="btn btn-blanco">Buy now</a>
                         </div>
                     </div>
                 </div>
@@ -253,7 +269,6 @@
                             </div>
                             <div class="formulario-grupo">
                                 <button class="btn3 btn2-verde">Next step</button>
-                                <!-- aqui -->
                             </div>
                         </form>
                     </div>
@@ -285,6 +300,23 @@
             </div>
         </div>
     </footer>
-    
+    <div class="ventana" id="ventana">
+        <div class="ventana-contenido">
+            <div class="ventana-izquierda">
+                <img src="/Imagenes/marian.png" alt="fo1" class="ventana-foto">
+                <img src="/Imagenes/fabiana.p.png" alt="fo2" class="ventana-foto">
+            </div>
+            <div class="ventana-derecha">
+                <a href="#seccion-tours" class="ventana-cerrar">&times;</a>
+                <h2 class="centrar-texto encabezado-animado">Strat Booking now</h2>
+                <h3 class="encabezado-cuarto">Important &ndash; Please read these terms before booking.</h3>
+                <p class="ventana-texto">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt animi asperiores alias non, nisi et odio dolore ipsa. Quia non maiores corporis distinctio adipisci vitae architecto atque, repellendus iste, voluptates temporibus veritatis quibusaliquid beatae quasiadi pisci vitae quis  distinctio adipisci vitae architecto atque, repellendus iste, voluptates temporibus veritatis quibusaliquid beatae !
+                </p>
+                <a href="#" class="btn btn-blanco
+                ">Book now</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
