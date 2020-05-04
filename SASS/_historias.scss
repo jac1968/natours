@@ -17,15 +17,18 @@
         transform: translateX(-3rem) skewx(12deg);
         position: relative;
     }
+    
     &-imagen {
         height: 100%;
         transform:  scale(1.3);
         backface-visibility: hidden;
         transition: all .4s;
     }
+    
     &-texto {
         transform: skewX(12deg);
     }
+    
     &-leyenda {
         position: absolute;
         top: 50%;
@@ -39,10 +42,12 @@
         transition: all .5s;
         backface-visibility: hidden;
     }
+    
     &:hover &-leyenda {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
+    
     &:hover &-imagen {
         transform:  scale(1);
         filter: blur(3px) brightness(80%) ;

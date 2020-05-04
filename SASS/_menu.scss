@@ -16,6 +16,7 @@
         box-shadow: 0 1.1rem 1rem rgba($negro, .35);
         cursor: pointer;
     }
+    
     &-fondo {
         height: 4rem;
         width: 4rem;
@@ -80,9 +81,11 @@
             transform: translateX(1rem);
         }
     }
+    
     &-chekbox:checked ~ &-fondo {
         transform: scale(80);
     }
+    
     &-chekbox:checked ~ &-navegacion {
         opacity: 1;
         width: 100%;
@@ -112,16 +115,23 @@
         &::after { top: .7rem; }
     }
 
-    &-btn:hover &-icono::before { top: -1.1rem; }
-    &-btn:hover &-icono::after { top: 1.1rem; }
+    &-btn:hover &-icono::before { 
+        top: -1.1rem;
+     }
+    
+     &-btn:hover &-icono::after { 
+         top: 1.1rem; 
+    }
 
     &-chekbox:checked + &-btn &-icono {
         background-color: transparent;
     }
+    
     &-chekbox:checked + &-btn &-icono::before {
         top: 0;
         transform: rotate(135deg);
     }
+    
     &-chekbox:checked + &-btn &-icono::after {
         top: 0;
         transform: rotate(-135deg);

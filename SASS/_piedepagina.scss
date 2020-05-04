@@ -2,14 +2,17 @@
     background-color: #333;
     padding: 5rem;
     font-size: 1rem;
+    
     &-logo-caja {
         text-align: center;
     }
+    
     &-logo {
         width: 6rem;
         height: auto;
         clip-path: ellipse(48% 53% at 50% 53%);
         }
+    
     &-navegacion nav {
         width: 100%;
         border-top: 1px solid $gris-claro;
@@ -17,6 +20,7 @@
         word-spacing: 3rem;
         transition: all .3s;
     }
+    
     &-navegacion nav a {
         font-family: Arial, Helvetica, sans-serif;
         color: $blanco;
@@ -30,6 +34,7 @@
             box-shadow: 0 1rem 2rem rgba($negro, .5);
         }
     }
+    
     &-copyright {
         padding: 2rem 0 0 0;
         width: 100%;
@@ -39,9 +44,9 @@
         padding: 2rem 0 0 0;
 
     }
+    
     &.fila .col-2 {
         padding: 2rem 0 0 0;
-
         display: inline;
         justify-items: right;
 
