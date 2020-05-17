@@ -58,6 +58,7 @@
     background-color: $gris-claro;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, minmax(1rem, max-content));
+
     &-texto {
         grid-column: span 3;
     }
@@ -113,6 +114,7 @@
             background-image: linear-gradient(to right bottom, $azul-claro, $azul-oscuro), url(/Imagenes/paisaje3.jpg);
         }
     }
+    
     &-encabezado {
         z-index: 1;
         margin-top: -5rem;
